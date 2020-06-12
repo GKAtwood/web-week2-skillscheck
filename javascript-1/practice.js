@@ -119,11 +119,10 @@ let me ={
 //    Return the answers array inside of the function.
 
 function bigOrSmall(arr){
-	let answers = [] ;
-	for(i = 0; i > arr.length; i++){
+	let answers = [];
+	for(i = 0; i < arr.length; i++){
 		if(arr[i] > 100){
-			answers.push('big')
-
+			 answers.push('big')
 		}else if(arr[i] <= 100){
       answers.push('small')
     }
@@ -146,8 +145,9 @@ function arrayReverser(arr){
 		 reversed.push(arr[i]);
 	}
 
-return reversed
+return reversed 
 }  
+
 
 
 
@@ -191,9 +191,9 @@ let total = myNumbers.reduce(function(acc, curr){
 // To begin, create an empty array called 'myNumbersIndex'. 
 // Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-let myNumbersIndex = [];
-myNumbers.forEach(function(element, index, array){
-	
+let myNumbersIndex = [0,1,2,3,4];
+myNumbers.forEach(function(item){
+	// myNumbersIndex.push(item)
 })
 
 //////////////////PROBLEM 18////////////////////
@@ -232,6 +232,6 @@ let enemies = people.filter(function(friends){
 // Using the people array above, get a total of the awesomeLevel from all the people, 
 // and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
-let totallyAwesome = people.reduce((acc, curr) => acc + curr.awesomeLevel);
-	
-  
+
+let totallyAwesome = people.reduce(function (acc, obj) { return acc + obj.awesomeLevel; }, 0); 
+console.log(totallyAwesome);
